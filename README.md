@@ -1,1 +1,18 @@
 # PRANAVI-
+
+#include<iostream>
+using namespace std;
+void swapRef(int &a,int&b){int t=a;a=b;b=t;}
+void swapPtr(int *a,int*b){int t=*a;*a=*b;*b=t;}
+int main()
+{
+    int x=10,y=20;
+    swapRef(x,y);
+    cout<<"After swapRef: x="<<x<<"y="<<y<<endl;
+    swapPtr(&x,&y);
+    cout<<"After swapPtr: x="<<x<<" y="<<y<<endl;
+     int &allias=x;
+     allias=99;
+     cout<<"X via allias="<<x<<endl;
+     return 0;
+}  
